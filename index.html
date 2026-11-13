@@ -29,7 +29,6 @@
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
-
         /* Base Floating Animation Generator */
         @keyframes floatGeneric {
             0%, 100% {
@@ -46,7 +45,6 @@
             pointer-events: none;
             animation: floatGeneric 4s ease-in-out infinite;
         }
-
         /* Animasi Floating Blob Background */
         @keyframes blobFloat {
             0%, 100% { transform: translate(0px, 0px) scale(1); }
@@ -57,7 +55,6 @@
             animation: blobFloat 7s ease-in-out infinite;
         }
         .animation-delay-2000 { animation-delay: 2s; }
-
         /* Animasi Denyut Foto */
         @keyframes pulseGlow {
             0%, 100% { box-shadow: 0 0 25px rgba(255, 209, 220, 0.6); }
@@ -66,7 +63,6 @@
         .pulse-avatar {
             animation: pulseGlow 4s ease-in-out infinite;
         }
-
         /* Animasi Hover Lift untuk Kartu */
         .animated-card {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -75,7 +71,6 @@
             transform: translateY(-8px) scale(1.01);
             box-shadow: 0 20px 30px -10px rgba(255, 182, 193, 0.35);
         }
-
         /* Animasi Gradient Text */
         @keyframes gradientMove {
             0% { background-position: 0% 50%; }
@@ -89,7 +84,6 @@
             -webkit-text-fill-color: transparent;
             animation: gradientMove 5s ease infinite;
         }
-
         @keyframes floatBadge {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-6px); }
@@ -97,7 +91,6 @@
         .float-badge {
             animation: floatBadge 3s ease-in-out infinite;
         }
-
         /* Utility Hide Scrollbar */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
@@ -106,7 +99,6 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
-
         /* PENYESUAIAN UKURAN MODAL LEBIH COMPACT */
         .modal-container {
             display: flex;
@@ -115,7 +107,6 @@
             max-width: 950px;
             max-height: 82vh;
         }
-
         .modal-header {
             position: relative;
             z-index: 10;
@@ -123,14 +114,12 @@
             background: white;
             flex-shrink: 0;
         }
-
         .close-button {
             position: absolute;
             top: 16px;
             right: 20px;
             z-index: 9999;
         }
-
         .gallery-content {
             flex: 1;
             min-height: 0;
@@ -141,7 +130,6 @@
             justify-content: center;
             padding: 10px 20px;
         }
-
         .gallery-image-container {
             max-height: 52vh;
             overflow: hidden;
@@ -150,7 +138,6 @@
             align-items: center;
             width: 100%;
         }
-
         .gallery-image {
             display: block;
             width: auto;
@@ -159,7 +146,6 @@
             max-height: 50vh;
             object-fit: contain;
         }
-
         .modal-footer {
             flex-shrink: 0;
             padding: 12px 20px;
@@ -169,7 +155,6 @@
     </style>
 </head>
 <body class="bg-gradient-to-br from-softPinkBg via-white to-softYellowBg text-gray-700 antialiased selection:bg-pink-200 overflow-x-hidden">
-
     <!-- Navigation Bar -->
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-pink-100 shadow-sm transition duration-300">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -200,11 +185,9 @@
             <a href="#contact" class="mobile-link text-pink-600 font-semibold py-1">Kontak</a>
         </div>
     </nav>
-
     <!-- Hero Section -->
     <section id="hero" class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 px-6">
         <div id="stars-container" class="absolute inset-0 pointer-events-none z-0"></div>
-
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
             <div class="space-y-6 text-center lg:text-left">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-100/80 border border-pink-200 text-pink-700 text-xs font-semibold tracking-wide uppercase float-badge shadow-sm">
@@ -214,15 +197,12 @@
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
                     Hi, I'm <span class="animated-text">Wulan</span> Septiani.
                 </h1>
-
                 <p class="text-lg font-semibold text-gray-700 italic">
                     "A journey of knowledge, code & impact"
                 </p>
-
                 <p class="text-sm sm:text-base text-gray-600 max-w-lg mx-auto lg:mx-0 leading-relaxed">
                     Mahasiswa S1 Rekayasa Perangkat Lunak Institut Teknologi Sepuluh Nopember (ITS). Berfokus pada pengembangan perangkat lunak, antarmuka pengguna, dan solusi digital yang interaktif.
                 </p>
-
                 <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
                     <a href="#projects" class="px-7 py-3 rounded-full bg-gray-900 text-white font-semibold shadow-md hover:bg-pink-500 hover:scale-105 transition transform duration-300">
                         Explore My Journey <i class="fa-solid fa-arrow-right ml-1"></i>
@@ -232,15 +212,12 @@
                     </a>
                 </div>
             </div>
-
             <div class="relative flex flex-col items-center justify-center space-y-4">
                 <div class="absolute w-72 h-72 sm:w-96 sm:h-96 bg-pastelPink rounded-full filter blur-2xl opacity-50 animate-blob z-0"></div>
                 <div class="absolute w-64 h-64 sm:w-80 sm:h-80 bg-pastelYellow rounded-full filter blur-2xl opacity-60 animate-blob animation-delay-2000 z-0"></div>
-
                 <div class="relative z-10 w-64 h-64 sm:w-80 sm:h-80 rounded-full border-4 border-white shadow-2xl overflow-hidden pulse-avatar bg-gradient-to-tr from-pink-100 to-yellow-100 flex items-center justify-center group">
                    <img src="assets/foto portofolio.jpeg" alt="Wulan Septiani" class="w-full h-full object-cover object-top group-hover:scale-110 transition duration-700 ease-out">
                 </div>
-
                 <div class="relative z-10 bg-white/90 backdrop-blur-md border border-pink-200 px-6 py-2.5 rounded-2xl shadow-xl flex items-center gap-3 text-sm float-badge">
                     <span class="flex items-center gap-2 text-gray-600 font-medium">
                         <i class="fa-solid fa-graduation-cap text-pink-500 animate-bounce"></i> IPK:
@@ -250,7 +227,6 @@
             </div>
         </div>
     </section>
-
     <!-- About Section -->
     <section id="about" class="py-20 bg-white/50 px-6">
         <div class="max-w-4xl mx-auto space-y-8">
@@ -271,13 +247,10 @@
                         <p class="text-xs text-gray-600 font-medium mt-0.5">S1 Rekayasa Perangkat Lunak • Departemen Teknik Informatika</p>
                     </div>
                 </div>
-
                 <p class="text-gray-600 leading-relaxed text-base max-w-3xl mx-auto text-center">
                     Saya memiliki antusiasme tinggi dalam mengeksplorasi pengembangan perangkat lunak, perancangan antarmuka pengguna (UI/UX), serta pembuatan solusi digital yang interaktif dan berpusat pada pengguna.
                 </p>
-
                 <div class="w-full h-px bg-pink-100"></div>
-
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-2">
                     <div class="space-y-3 bg-pink-50/40 p-6 rounded-2xl border border-pink-100/60">
                         <h4 class="font-bold text-gray-800 flex items-center gap-2.5 text-base">
@@ -290,99 +263,119 @@
                             <li class="flex items-center gap-2"><i class="fa-solid fa-circle text-[6px] text-pink-400"></i> Design Thinking</li>
                         </ul>
                     </div>
-
                     <div class="space-y-3 bg-yellow-50/40 p-6 rounded-2xl border border-yellow-100/60">
                         <h4 class="font-bold text-gray-800 flex items-center gap-2.5 text-base">
                             <i class="fa-solid fa-users text-yellow-600"></i> Aktivitas & Peran
                         </h4>
                         <p class="text-sm text-gray-600 leading-relaxed">
-                            Aktif dalam berbagai kegiatan kepanitiaan kampus seperti TFT ITS, Schematics ITS, kepenulisan ilmiah, serta program magang virtual berbasis proyek.
+                            Aktif dalam kepemimpinan organisasi ilmiah, kepanitiaan kampus (TFT, Schematics ITS), serta program magang virtual berbasis proyek.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Experience Section -->
     <section id="experience" class="py-20 px-6">
         <div class="max-w-5xl mx-auto space-y-12">
             <div class="text-center space-y-2">
                 <span class="text-xs font-bold tracking-widest text-pink-500 uppercase">Perjalanan & Kontribusi</span>
-                <h2 class="text-3xl font-bold text-gray-900">Pengalaman Kepanitiaan & Profesional</h2>
+                <h2 class="text-3xl font-bold text-gray-900">Pengalaman Kepemimpinan & Organisasi</h2>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-                <!-- Card 1 -->
-                <div class="bg-white p-6 rounded-3xl border border-pink-100 shadow-sm animated-card flex flex-col justify-between space-y-4">
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-start gap-2">
-                            <span class="text-xs font-semibold px-3 py-1 bg-pink-100 text-pink-700 rounded-full">TFT ITS</span>
-                            <span class="text-xs text-gray-400 font-medium whitespace-nowrap">Okt 2026 - Sekarang</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                <!-- Kolom Kiri: 1. KIR, 2. Schematics ITS -->
+                <div class="flex flex-col gap-6">
+                    <!-- Card 1: KIR -->
+                    <div class="bg-white p-6 rounded-3xl border border-pink-100 shadow-sm animated-card flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-start gap-2">
+                                <span class="text-xs font-semibold px-3 py-1 bg-pink-100 text-pink-700 rounded-full">Kelompok Ilmiah Remaja</span>
+                                <span class="text-xs text-gray-400 font-medium whitespace-nowrap">Jan 2023 - Jan 2024</span>
+                            </div>
+                            <h3 class="font-bold text-gray-900 text-lg">Head — Trenggalek</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Memimpin dan mengkoordinasikan tim beranggotakan 20 orang dalam merencanakan kegiatan ilmiah serta membimbing keterampilan penulisan riset anggota.
+                            </p>
                         </div>
-                        <h3 class="font-bold text-gray-900 text-lg">Creative Branding</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Merancang poster open recruitment, event banner untuk Scientific Mentorship Program, serta mendokumentasikan acara secara visual.
-                        </p>
+                        <div class="pt-2 flex justify-center w-full">
+                            <img src="assets/foto kir.jpeg" alt="Kelompok Ilmiah Remaja Trenggalek" class="w-full max-w-[320px] sm:max-w-[360px] h-auto object-contain rounded-2xl shadow-md">
+                        </div>
                     </div>
-                    <div class="pt-2 flex justify-center w-full">
-                        <img src="assets/poster.jpg" alt="Poster Creative Branding" class="w-full max-w-[170px] sm:max-w-[190px] h-auto object-contain rounded-2xl shadow-md">
+
+                    <!-- Card 2: Schematics ITS -->
+                    <div class="bg-white p-6 rounded-3xl border border-pink-100 shadow-sm animated-card flex flex-col space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-start gap-2">
+                                <span class="text-xs font-semibold px-3 py-1 bg-pink-100 text-pink-700 rounded-full">Schematics ITS</span>
+                                <span class="text-xs text-gray-400 font-medium whitespace-nowrap">Mei 2026 - Sekarang</span>
+                            </div>
+                            <h3 class="font-bold text-gray-900 text-lg">Expert Staff Division External Relationship</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Mengkoordinasikan staf dalam promosi kompetisi ke sekolah-sekolah di Indonesia dan memantau progres tugas publikasi.
+                            </p>
+                        </div>
+                        <div class="pt-1 flex justify-center items-center w-full">
+                            <img src="assets/foto schematics.jpeg" alt="Foto Schematics ITS External Relationship" class="w-full max-w-[340px] sm:max-w-[380px] h-auto object-contain rounded-2xl shadow-md">
+                        </div>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="bg-white p-6 rounded-3xl border border-yellow-100 shadow-sm animated-card flex flex-col space-y-4">
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-start gap-2">
-                            <span class="text-xs font-semibold px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full">Schematics ITS</span>
-                            <span class="text-xs text-gray-400 font-medium whitespace-nowrap">Mei 2026 - Sekarang</span>
+                <!-- Kolom Kanan: 1. TFT ITS, 2. UI/UX Designer, 3. PEKIL -->
+                <div class="flex flex-col gap-6">
+                    <!-- Card 1: TFT ITS -->
+                    <div class="bg-white p-6 rounded-3xl border border-yellow-100 shadow-sm animated-card flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-start gap-2">
+                                <span class="text-xs font-semibold px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full">TFT ITS</span>
+                                <span class="text-xs text-gray-400 font-medium whitespace-nowrap">Okt 2026 - Sekarang</span>
+                            </div>
+                            <h3 class="font-bold text-gray-900 text-lg">Creative Branding</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Merancang poster open recruitment, event banner untuk Scientific Mentorship Program, serta mendokumentasikan acara secara visual.
+                            </p>
                         </div>
-                        <h3 class="font-bold text-gray-900 text-lg">Expert Staff Division External Relationship</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Mengkoordinasikan staf dalam promosi kompetisi ke sekolah-sekolah di Indonesia dan memantau progres tugas publikasi.
-                        </p>
+                        <div class="pt-2 flex justify-center w-full">
+                            <img src="assets/poster.jpg" alt="Poster Creative Branding" class="w-full max-w-[170px] sm:max-w-[190px] h-auto object-contain rounded-2xl shadow-md">
+                        </div>
                     </div>
-                    <div class="pt-1 flex justify-center items-center w-full">
-                        <img src="assets/foto schematics.jpeg" alt="Foto Schematics ITS External Relationship" class="w-full max-w-[340px] sm:max-w-[380px] h-auto object-contain rounded-2xl shadow-md">
-                    </div>
-                </div>
 
-                <!-- Card 3 -->
-                <div class="bg-white p-6 rounded-3xl border border-pink-100 shadow-sm animated-card flex flex-col justify-between space-y-4">
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-start gap-2">
-                            <span class="text-xs font-semibold px-3 py-1 bg-pink-100 text-pink-700 rounded-full">Nuri x Rakamin Academy</span>
-                            <span class="text-xs text-gray-400 font-medium whitespace-nowrap">Okt 2025 - Nov 2025</span>
+                    <!-- Card 2: UI/UX Designer -->
+                    <div class="bg-white p-6 rounded-3xl border border-yellow-100 shadow-sm animated-card flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-start gap-2">
+                                <span class="text-xs font-semibold px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full">Nuri x Rakamin Academy</span>
+                                <span class="text-xs text-gray-400 font-medium whitespace-nowrap">Okt 2025 - Nov 2025</span>
+                            </div>
+                            <h3 class="font-bold text-gray-900 text-lg">UI/UX Designer (Virtual Intern)</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Menerapkan prinsip Design Thinking, merancang solusi desain berpusat pada pengguna, serta melakukan usability testing untuk aplikasi e-commerce.
+                            </p>
                         </div>
-                        <h3 class="font-bold text-gray-900 text-lg">UI/UX Designer (Virtual Intern)</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Menerapkan prinsip Design Thinking, merancang solusi desain berpusat pada pengguna, serta melakukan usability testing untuk aplikasi e-commerce.
-                        </p>
+                        <div class="pt-2 border-t border-gray-100">
+                            <button onclick="openInternshipModal()" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-pink-500 hover:bg-pink-600 text-white text-xs font-semibold rounded-xl shadow-md transition duration-300 cursor-pointer">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i> Lihat Desain UI/UX Internship
+                            </button>
+                        </div>
                     </div>
-                    <div class="pt-2 border-t border-gray-100">
-                        <button onclick="openInternshipModal()" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-pink-500 hover:bg-pink-600 text-white text-xs font-semibold rounded-xl shadow-md transition duration-300 cursor-pointer">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i> Lihat Desain UI/UX Internship
-                        </button>
-                    </div>
-                </div>
 
-                <!-- Card 4 -->
-                <div class="bg-white p-6 rounded-3xl border border-yellow-100 shadow-sm animated-card flex flex-col justify-between space-y-4">
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-start gap-2">
-                            <span class="text-xs font-semibold px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full">PKTI-TD ITS</span>
-                            <span class="text-xs text-gray-400 font-medium whitespace-nowrap">Sep 2025 - Okt 2025</span>
+                    <!-- Card 3: PKTI-TD ITS (PEKIL) -->
+                    <div class="bg-white p-6 rounded-3xl border border-pink-100 shadow-sm animated-card flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-start gap-2">
+                                <span class="text-xs font-semibold px-3 py-1 bg-pink-100 text-pink-700 rounded-full">PKTI-TD ITS</span>
+                                <span class="text-xs text-gray-400 font-medium whitespace-nowrap">Sep 2025 - Okt 2025</span>
+                            </div>
+                            <h3 class="font-bold text-gray-900 text-lg">Scientific Trainer (PEKIL)</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Membimbing mahasiswa dalam memahami dasar penulisan ilmiah, struktur makalah akademik, serta berpikir kritis dalam penelitian.
+                            </p>
                         </div>
-                        <h3 class="font-bold text-gray-900 text-lg">Scientific Trainer (PEKIL)</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Membimbing mahasiswa dalam memahami dasar penulisan ilmiah, struktur makalah akademik, serta berpikir kritis dalam penelitian.
-                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Projects Section -->
     <section id="projects" class="py-20 bg-white/50 px-6">
         <div class="max-w-6xl mx-auto space-y-12">
@@ -390,14 +383,12 @@
                 <span class="text-xs font-bold tracking-widest text-pink-500 uppercase">Karya & Inovasi</span>
                 <h2 class="text-3xl font-bold text-gray-900">Proyek</h2>
             </div>
-
             <div class="flex flex-wrap justify-center gap-2" id="filter-container">
                 <button onclick="filterProjects('all')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold bg-pink-400 text-white shadow-md hover:scale-105 transition transform cursor-pointer">Semua</button>
                 <button onclick="filterProjects('web')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold bg-white text-gray-600 border border-gray-100 hover:bg-pink-50 hover:scale-105 transition transform cursor-pointer">Web App</button>
                 <button onclick="filterProjects('ai')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold bg-white text-gray-600 border border-gray-100 hover:bg-pink-50 hover:scale-105 transition transform cursor-pointer">AI & Python</button>
                 <button onclick="filterProjects('other')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold bg-white text-gray-600 border border-gray-100 hover:bg-pink-50 hover:scale-105 transition transform cursor-pointer">Game & Lainnya</button>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-grid">
                 <!-- 1. FlipMind -->
                 <div class="project-card bg-white rounded-3xl border border-pink-100 p-6 shadow-sm animated-card flex flex-col justify-between" data-category="ai">
@@ -420,7 +411,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- 2. Todo List Fast API -->
                 <div class="project-card bg-white rounded-3xl border border-yellow-100 p-6 shadow-sm animated-card flex flex-col justify-between" data-category="web">
                     <div class="space-y-4">
@@ -441,7 +431,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- 3. CatchLearn -->
                 <div class="project-card bg-white rounded-3xl border border-pink-100 p-6 shadow-sm animated-card flex flex-col justify-between" data-category="ai">
                     <div class="space-y-4">
@@ -462,7 +451,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- 4. Library Management System -->
                 <div class="project-card bg-white rounded-3xl border border-yellow-100 p-6 shadow-sm animated-card flex flex-col justify-between" data-category="web">
                     <div class="space-y-4">
@@ -484,7 +472,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- 5. Jungle Monkey 2D Game -->
                 <div class="project-card bg-white rounded-3xl border border-pink-100 p-6 shadow-sm animated-card flex flex-col justify-between" data-category="other">
                     <div class="space-y-4">
@@ -505,7 +492,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- 6. A* Pathfinding Bus Route Finder -->
                 <div class="project-card bg-white rounded-3xl border border-yellow-100 p-6 shadow-sm animated-card flex flex-col justify-between" data-category="other">
                     <div class="space-y-4">
@@ -529,7 +515,6 @@
             </div>
         </div>
     </section>
-
     <!-- MODAL POPUP GALERI UI/UX -->
     <div id="internship-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-[rgba(15,23,42,0.55)] backdrop-blur-[4px]">
         <div class="bg-white rounded-3xl modal-container shadow-2xl relative overflow-hidden">
@@ -548,7 +533,6 @@
                 <button onclick="slideInternship('next')" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/95 hover:bg-white shadow-md text-gray-800 flex items-center justify-center transition border border-gray-200 cursor-pointer" aria-label="Selanjutnya">
                     <i class="fa-solid fa-chevron-right text-sm"></i>
                 </button>
-
                 <div id="internship-track" class="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory py-2 items-center w-full justify-start px-8">
                     <div class="min-w-full snap-center flex flex-col items-center justify-center">
                         <div class="gallery-image-container">
@@ -576,12 +560,11 @@
                     </div>
                     <div class="min-w-full snap-center flex flex-col items-center justify-center">
                         <div class="gallery-image-container">
-                            <img src="assets/Order success page .png" alt="Order success page" class="gallery-image rounded-md">
+                            <img src="assets/Order succes page .png" alt="Order success page" class="gallery-image rounded-md">
                         </div>
                         <span class="text-xs font-semibold text-gray-500 mt-2 flex-shrink-0">Order Success Page</span>
                     </div>
                 </div>
-
                 <div class="flex justify-center gap-2 pt-2 flex-shrink-0" id="internship-dots">
                     <span class="w-2 h-2 rounded-full bg-pink-500 transition-all duration-300"></span>
                     <span class="w-2 h-2 rounded-full bg-gray-200 transition-all duration-300"></span>
@@ -590,7 +573,6 @@
                     <span class="w-2 h-2 rounded-full bg-gray-200 transition-all duration-300"></span>
                 </div>
             </div>
-
             <div class="modal-footer flex justify-end">
                 <button onclick="closeInternshipModal()" class="px-5 py-2 rounded-full bg-gray-900 text-white text-xs font-semibold hover:bg-pink-500 transition cursor-pointer shadow-sm">
                     Tutup
@@ -598,7 +580,6 @@
             </div>
         </div>
     </div>
-
     <!-- Skills Section -->
     <section id="skills" class="py-20 px-6">
         <div class="max-w-5xl mx-auto space-y-12">
@@ -606,7 +587,6 @@
                 <span class="text-xs font-bold tracking-widest text-pink-500 uppercase">Kompetensi</span>
                 <h2 class="text-3xl font-bold text-gray-900">Keahlian & Kemampuan</h2>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Hard Skills -->
                 <div class="bg-white p-8 rounded-3xl border border-pink-100 shadow-sm animated-card space-y-6">
@@ -627,7 +607,6 @@
                         <span class="px-3.5 py-1.5 bg-pink-50 text-pink-700 text-xs font-semibold rounded-full hover:scale-105 hover:bg-pink-100 transition transform cursor-pointer flex items-center gap-2"><i class="fa-brands fa-figma text-rose-400"></i> UI/UX Design (Figma)</span>
                     </div>
                 </div>
-
                 <!-- Soft Skills -->
                 <div class="bg-white p-8 rounded-3xl border border-yellow-100 shadow-sm animated-card space-y-6">
                     <h3 class="font-bold text-gray-900 text-lg flex items-center gap-2">
@@ -644,7 +623,6 @@
             </div>
         </div>
     </section>
-
     <!-- Achievements Section -->
     <section id="achievements" class="py-20 bg-white/50 px-6">
         <div class="max-w-4xl mx-auto space-y-10">
@@ -652,7 +630,6 @@
                 <span class="text-xs font-bold tracking-widest text-pink-500 uppercase">Sertifikat & Penghargaan</span>
                 <h2 class="text-3xl font-bold text-gray-900">Prestasi</h2>
             </div>
-
             <div class="relative px-8 sm:px-14 bg-white p-8 rounded-3xl border border-pink-100 shadow-xl">
                 <button onclick="slideAchievements('prev')" class="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white shadow-md hover:bg-pink-50 text-gray-800 flex items-center justify-center transition border border-pink-100 cursor-pointer" aria-label="Sebelumnya">
                     <i class="fa-solid fa-chevron-left text-sm"></i>
@@ -660,7 +637,6 @@
                 <button onclick="slideAchievements('next')" class="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white shadow-md hover:bg-pink-50 text-gray-800 flex items-center justify-center transition border border-pink-100 cursor-pointer" aria-label="Selanjutnya">
                     <i class="fa-solid fa-chevron-right text-sm"></i>
                 </button>
-
                 <div id="achievement-track" class="flex gap-8 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory py-2 items-center">
                     <div class="min-w-full snap-center flex justify-center items-center">
                         <img src="assets/sertifikat finest essay .jpg" alt="FINEST Essay Competition" class="max-h-[380px] w-auto object-contain rounded-lg shadow-sm">
@@ -675,7 +651,6 @@
                         <img src="assets/sertifikat project based internship.jpg" alt="PBI Certificate" class="max-h-[380px] w-auto object-contain rounded-lg shadow-sm">
                     </div>
                 </div>
-
                 <div class="flex justify-center gap-2 pt-6" id="achievement-dots">
                     <span class="w-2.5 h-2.5 rounded-full bg-pink-500 transition-all duration-300"></span>
                     <span class="w-2.5 h-2.5 rounded-full bg-gray-200 transition-all duration-300"></span>
@@ -685,7 +660,6 @@
             </div>
         </div>
     </section>
-
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-white/50 px-6">
         <div class="max-w-3xl mx-auto bg-gradient-to-br from-pink-50 via-white to-yellow-50 p-8 sm:p-12 rounded-3xl border border-pink-200 shadow-xl animated-card text-center space-y-6 relative overflow-hidden">
@@ -704,53 +678,43 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="py-8 text-center text-xs text-gray-500 border-t border-pink-100 bg-white/30">
         <p>© 2026 Wulan Septiani • Crafted with passion & code.</p>
     </footer>
-
     <!-- JavaScript -->
     <script>
         // Mobile Menu Toggle
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
-
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
-
         // Internship Modal Functions
         const internshipModal = document.getElementById('internship-modal');
-
         function openInternshipModal() {
             internshipModal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         }
-
         function closeInternshipModal() {
             internshipModal.classList.add('hidden');
             document.body.style.overflow = '';
         }
-
         window.addEventListener('click', (e) => {
             if (e.target === internshipModal) {
                 closeInternshipModal();
             }
         });
-
         // Internship Carousel Logic
         let internIndex = 0;
         const internTrack = document.getElementById('internship-track');
         const internDots = document.getElementById('internship-dots').children;
-
         function slideInternship(direction) {
             const totalItems = internTrack.children.length;
             if (direction === 'next') {
@@ -765,7 +729,6 @@
             });
             updateInternDots();
         }
-
         function updateInternDots() {
             Array.from(internDots).forEach((dot, idx) => {
                 if (idx === internIndex) {
@@ -777,7 +740,6 @@
                 }
             });
         }
-
         internTrack.addEventListener('scroll', () => {
             const scrollPos = internTrack.scrollLeft;
             const cardWidth = internTrack.children[0].offsetWidth + 16;
@@ -787,12 +749,10 @@
                 updateInternDots();
             }
         });
-
         // Achievements Carousel Logic
         let achieveIndex = 0;
         const achieveTrack = document.getElementById('achievement-track');
         const achieveDots = document.getElementById('achievement-dots').children;
-
         function slideAchievements(direction) {
             const totalItems = achieveTrack.children.length;
             if (direction === 'next') {
@@ -807,7 +767,6 @@
             });
             updateAchieveDots();
         }
-
         function updateAchieveDots() {
             Array.from(achieveDots).forEach((dot, idx) => {
                 if (idx === achieveIndex) {
@@ -819,7 +778,6 @@
                 }
             });
         }
-
         achieveTrack.addEventListener('scroll', () => {
             const scrollPos = achieveTrack.scrollLeft;
             const cardWidth = achieveTrack.children[0].offsetWidth + 32;
@@ -829,19 +787,16 @@
                 updateAchieveDots();
             }
         });
-
         // Project Filter Function
         function filterProjects(category) {
             const cards = document.querySelectorAll('.project-card');
             const buttons = document.querySelectorAll('#filter-container button');
-
             buttons.forEach(btn => {
                 btn.classList.remove('bg-pink-400', 'text-white', 'shadow-md');
                 btn.classList.add('bg-white', 'text-gray-600');
             });
             event.target.classList.remove('bg-white', 'text-gray-600');
             event.target.classList.add('bg-pink-400', 'text-white', 'shadow-md');
-
             cards.forEach(card => {
                 if (category === 'all' || card.dataset.category === category) {
                     card.style.display = 'flex';
@@ -850,7 +805,6 @@
                 }
             });
         }
-
         // --- DYNAMIC BACKGROUND FLOATING ANIMATION GENERATORS ---
         
         // 1. Hero Section (Bintang)
