@@ -152,6 +152,101 @@
             background: white;
             border-top: 1px solid #f3f4f6;
         }
+        
+        /* CSS untuk Footer Berjalan (Marquee) */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            background: linear-gradient(90deg, #ff8da1, #ffa1c9, #ffd1dc);
+            padding: 18px 0;
+            box-sizing: border-box;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .marquee-track {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scrollMarquee 22s linear infinite;
+        }
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+        .marquee-track span {
+            display: inline-block;
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 1px;
+            padding-right: 40px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* --- STYLING ANIMASI TECH BLUEPRINT BANNER --- */
+        .blueprint-banner {
+            background-color: #0f172a;
+            border-top: 2px solid #334155;
+            border-bottom: 2px solid #334155;
+            position: relative;
+            overflow: hidden;
+            height: 160px;
+        }
+        @keyframes driveCar {
+            0% { transform: translateX(-120px); }
+            100% { transform: translateX(105vw); }
+        }
+        .animated-car-container {
+            position: absolute;
+            bottom: 12px;
+            animation: driveCar 12s linear infinite;
+        }
+        @keyframes floatCloud {
+            0%, 100% { transform: translateX(0px); }
+            50% { transform: translateX(20px); }
+        }
+        .blueprint-cloud-1 {
+            animation: floatCloud 6s ease-in-out infinite;
+        }
+        .blueprint-cloud-2 {
+            animation: floatCloud 8s ease-in-out infinite reverse;
+        }
+
+        /* --- STYLING COVERFLOW 3D UNTUK GALERI SERTIFIKAT --- */
+        .coverflow-container {
+            perspective: 1000px;
+            overflow: hidden;
+            width: 100%;
+            padding: 20px 0;
+        }
+        .coverflow-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: transform;
+            align-items: center;
+        }
+        .coverflow-item {
+            min-width: 70%;
+            max-width: 700px;
+            flex-shrink: 0;
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            transform: scale(0.85);
+            opacity: 0.4;
+            filter: blur(2px);
+        }
+        .coverflow-item.active {
+            transform: scale(1);
+            opacity: 1;
+            filter: blur(0);
+            z-index: 10;
+        }
+        @media (min-width: 768px) {
+            .coverflow-item {
+                min-width: 50%;
+            }
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-softPinkBg via-white to-softYellowBg text-gray-700 antialiased selection:bg-pink-200 overflow-x-hidden">
@@ -160,7 +255,7 @@
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#hero" class="font-extrabold text-xl text-gray-800 tracking-wide flex items-center gap-2 group">
                 <span class="w-3.5 h-3.5 rounded-full bg-pink-400 group-hover:scale-150 transition duration-300"></span>
-                <span class="hover:text-pink-500 transition">PORTOFOLIO</span>
+                <span class="hover:text-pink-500 transition">portofolio</span>
             </a>
             <div class="hidden md:flex items-center gap-8 text-sm font-semibold">
                 <a href="#about" class="hover:text-pink-500 hover:-translate-y-0.5 transition transform inline-block">Tentang</a>
@@ -227,6 +322,34 @@
             </div>
         </div>
     </section>
+
+    <!-- Interactive Tech Blueprint Animation Banner -->
+    <div class="blueprint-banner">
+        <div class="absolute top-3 left-4 right-4 flex justify-between text-[10px] text-pink-300 tracking-widest font-mono opacity-70 border-t border-dashed border-pink-300/40 pt-1">
+            <span>|--- SYSTEM ARCHITECTURE ---|</span>
+            <span class="text-yellow-300 font-bold">&lt;/ WULAN SEPTIANI &gt;</span>
+            <span>|--- DEPLOYMENT READY ---|</span>
+        </div>
+        <div class="absolute top-6 left-12 text-yellow-300/80 text-xl animate-spin" style="animation-duration: 15s;">
+            <i class="fa-solid fa-sun"></i>
+        </div>
+        <div class="absolute top-5 left-1/3 text-gray-400/40 text-2xl blueprint-cloud-1">
+            <i class="fa-solid fa-cloud"></i>
+        </div>
+        <div class="absolute top-8 right-1/4 text-gray-400/30 text-xl blueprint-cloud-2">
+            <i class="fa-solid fa-cloud"></i>
+        </div>
+        <div class="absolute bottom-6 left-0 right-0 h-[2px] bg-pink-300/60"></div>
+        <div class="animated-car-container flex items-center gap-2">
+            <div class="bg-pink-400 text-white px-3 py-1 rounded-md text-xs font-mono font-bold shadow-lg border border-pink-200 flex items-center gap-1.5">
+                <i class="fa-solid fa-code text-yellow-200 animate-pulse"></i> git push
+            </div>
+            <div class="text-2xl text-yellow-300 drop-shadow">
+                <i class="fa-solid fa-laptop-code"></i>
+            </div>
+        </div>
+    </div>
+
     <!-- About Section -->
     <section id="about" class="py-20 bg-white/50 px-6">
         <div class="max-w-4xl mx-auto space-y-8">
@@ -237,7 +360,6 @@
             
             <div class="bg-white p-8 sm:p-10 rounded-3xl border border-pink-100 shadow-md animated-card space-y-8">
                 
-                <!-- Identitas Kampus & Gambar Rektorat ITS -->
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 bg-gradient-to-r from-pink-50/60 to-yellow-50/60 p-5 rounded-2xl border border-pink-100 text-center sm:text-left">
                     <div class="w-16 h-16 rounded-2xl bg-white shadow-md flex items-center justify-center border border-pink-100 flex-shrink-0 overflow-hidden p-1">
                         <img src="assets/rektorat its.jpeg" alt="Rektorat ITS" class="w-full h-full object-cover rounded-xl">
@@ -284,16 +406,14 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-                <!-- Kolom Kiri: 1. KIR, 2. Schematics ITS -->
                 <div class="flex flex-col gap-6">
-                    <!-- Card 1: KIR -->
                     <div class="bg-white p-6 rounded-3xl border border-pink-100 shadow-sm animated-card flex flex-col justify-between space-y-4">
                         <div class="space-y-3">
                             <div class="flex justify-between items-start gap-2">
                                 <span class="text-xs font-semibold px-3 py-1 bg-pink-100 text-pink-700 rounded-full">Kelompok Ilmiah Remaja</span>
                                 <span class="text-xs text-gray-400 font-medium whitespace-nowrap">Jan 2023 - Jan 2024</span>
                             </div>
-                            <h3 class="font-bold text-gray-900 text-lg">Head — SMA Negeri 1 Trenggalek</h3>
+                            <h3 class="font-bold text-gray-900 text-lg">Head — Trenggalek</h3>
                             <p class="text-sm text-gray-600 leading-relaxed">
                                 Memimpin dan mengkoordinasikan tim beranggotakan 20 orang dalam merencanakan kegiatan ilmiah serta membimbing keterampilan penulisan riset anggota.
                             </p>
@@ -303,7 +423,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 2: Schematics ITS -->
                     <div class="bg-white p-6 rounded-3xl border border-pink-100 shadow-sm animated-card flex flex-col space-y-4">
                         <div class="space-y-3">
                             <div class="flex justify-between items-start gap-2">
@@ -321,9 +440,7 @@
                     </div>
                 </div>
 
-                <!-- Kolom Kanan: 1. TFT ITS, 2. UI/UX Designer, 3. PEKIL -->
                 <div class="flex flex-col gap-6">
-                    <!-- Card 1: TFT ITS -->
                     <div class="bg-white p-6 rounded-3xl border border-yellow-100 shadow-sm animated-card flex flex-col justify-between space-y-4">
                         <div class="space-y-3">
                             <div class="flex justify-between items-start gap-2">
@@ -340,7 +457,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 2: UI/UX Designer -->
                     <div class="bg-white p-6 rounded-3xl border border-yellow-100 shadow-sm animated-card flex flex-col justify-between space-y-4">
                         <div class="space-y-3">
                             <div class="flex justify-between items-start gap-2">
@@ -359,7 +475,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 3: PKTI-TD ITS (PEKIL) -->
                     <div class="bg-white p-6 rounded-3xl border border-pink-100 shadow-sm animated-card flex flex-col justify-between space-y-4">
                         <div class="space-y-3">
                             <div class="flex justify-between items-start gap-2">
@@ -390,7 +505,6 @@
                 <button onclick="filterProjects('other')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold bg-white text-gray-600 border border-gray-100 hover:bg-pink-50 hover:scale-105 transition transform cursor-pointer">Game & Lainnya</button>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-grid">
-                <!-- 1. FlipMind -->
                 <div class="project-card bg-white rounded-3xl border border-pink-100 p-6 shadow-sm animated-card flex flex-col justify-between" data-category="ai">
                     <div class="space-y-4">
                         <div class="flex justify-between items-center">
@@ -411,7 +525,6 @@
                         </a>
                     </div>
                 </div>
-                <!-- 2. Todo List Fast API -->
                 <div class="project-card bg-white rounded-3xl border border-yellow-100 p-6 shadow-sm animated-card flex flex-col justify-between" data-category="web">
                     <div class="space-y-4">
                         <div class="flex justify-between items-center">
@@ -431,7 +544,6 @@
                         </a>
                     </div>
                 </div>
-                <!-- 3. CatchLearn -->
                 <div class="project-card bg-white rounded-3xl border border-pink-100 p-6 shadow-sm animated-card flex flex-col justify-between" data-category="ai">
                     <div class="space-y-4">
                         <div class="flex justify-between items-center">
@@ -451,7 +563,6 @@
                         </a>
                     </div>
                 </div>
-                <!-- 4. Library Management System -->
                 <div class="project-card bg-white rounded-3xl border border-yellow-100 p-6 shadow-sm animated-card flex flex-col justify-between" data-category="web">
                     <div class="space-y-4">
                         <div class="flex justify-between items-center">
@@ -472,7 +583,6 @@
                         </a>
                     </div>
                 </div>
-                <!-- 5. Jungle Monkey 2D Game -->
                 <div class="project-card bg-white rounded-3xl border border-pink-100 p-6 shadow-sm animated-card flex flex-col justify-between" data-category="other">
                     <div class="space-y-4">
                         <div class="flex justify-between items-center">
@@ -492,7 +602,6 @@
                         </a>
                     </div>
                 </div>
-                <!-- 6. A* Pathfinding Bus Route Finder -->
                 <div class="project-card bg-white rounded-3xl border border-yellow-100 p-6 shadow-sm animated-card flex flex-col justify-between" data-category="other">
                     <div class="space-y-4">
                         <div class="flex justify-between items-center">
@@ -515,6 +624,7 @@
             </div>
         </div>
     </section>
+
     <!-- MODAL POPUP GALERI UI/UX -->
     <div id="internship-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-[rgba(15,23,42,0.55)] backdrop-blur-[4px]">
         <div class="bg-white rounded-3xl modal-container shadow-2xl relative overflow-hidden">
@@ -560,7 +670,7 @@
                     </div>
                     <div class="min-w-full snap-center flex flex-col items-center justify-center">
                         <div class="gallery-image-container">
-                            <img src="assets/Order succes page .png" alt="Order success page" class="gallery-image rounded-md">
+                            <img src="assets/Order success page .png" alt="Order success page" class="gallery-image rounded-md">
                         </div>
                         <span class="text-xs font-semibold text-gray-500 mt-2 flex-shrink-0">Order Success Page</span>
                     </div>
@@ -580,6 +690,7 @@
             </div>
         </div>
     </div>
+
     <!-- Skills Section -->
     <section id="skills" class="py-20 px-6">
         <div class="max-w-5xl mx-auto space-y-12">
@@ -623,34 +734,45 @@
             </div>
         </div>
     </section>
-    <!-- Achievements Section -->
-    <section id="achievements" class="py-20 bg-white/50 px-6">
-        <div class="max-w-4xl mx-auto space-y-10">
+
+    <!-- Achievements Section (Updated to Coverflow 3D Gallery Style) -->
+    <section id="achievements" class="py-20 bg-white/50 px-6 overflow-hidden">
+        <div class="max-w-5xl mx-auto space-y-10">
             <div class="text-center space-y-2">
                 <span class="text-xs font-bold tracking-widest text-pink-500 uppercase">Sertifikat & Penghargaan</span>
                 <h2 class="text-3xl font-bold text-gray-900">Prestasi</h2>
             </div>
-            <div class="relative px-8 sm:px-14 bg-white p-8 rounded-3xl border border-pink-100 shadow-xl">
-                <button onclick="slideAchievements('prev')" class="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white shadow-md hover:bg-pink-50 text-gray-800 flex items-center justify-center transition border border-pink-100 cursor-pointer" aria-label="Sebelumnya">
+            
+            <div class="relative w-full coverflow-container">
+                <!-- Navigasi Tombol Kiri Kanan -->
+                <button onclick="slideAchievements('prev')" class="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-white shadow-lg hover:bg-pink-50 text-gray-800 flex items-center justify-center transition border border-pink-100 cursor-pointer" aria-label="Sebelumnya">
                     <i class="fa-solid fa-chevron-left text-sm"></i>
                 </button>
-                <button onclick="slideAchievements('next')" class="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white shadow-md hover:bg-pink-50 text-gray-800 flex items-center justify-center transition border border-pink-100 cursor-pointer" aria-label="Selanjutnya">
+                <button onclick="slideAchievements('next')" class="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-white shadow-lg hover:bg-pink-50 text-gray-800 flex items-center justify-center transition border border-pink-100 cursor-pointer" aria-label="Selanjutnya">
                     <i class="fa-solid fa-chevron-right text-sm"></i>
                 </button>
-                <div id="achievement-track" class="flex gap-8 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory py-2 items-center">
-                    <div class="min-w-full snap-center flex justify-center items-center">
-                        <img src="assets/sertifikat finest essay .jpg" alt="FINEST Essay Competition" class="max-h-[380px] w-auto object-contain rounded-lg shadow-sm">
+
+                <!-- Track Coverflow -->
+                <div id="achievement-track" class="coverflow-track flex items-center justify-center gap-6">
+                    <div class="coverflow-item bg-white p-4 rounded-3xl border border-pink-100 shadow-xl flex flex-col items-center">
+                        <img src="assets/sertifikat finest essay .jpg" alt="FINEST Essay Competition" class="max-h-[380px] w-auto object-contain rounded-2xl shadow-sm">
+                        <span class="text-sm font-bold text-gray-800 mt-4">FINEST Essay Competition</span>
                     </div>
-                    <div class="min-w-full snap-center flex justify-center items-center">
-                        <img src="assets/sertifikat essay .jpg" alt="Airlangga Nanotechnology Week" class="max-h-[380px] w-auto object-contain rounded-lg shadow-sm">
+                    <div class="coverflow-item bg-white p-4 rounded-3xl border border-pink-100 shadow-xl flex flex-col items-center">
+                        <img src="assets/sertifikat essay .jpg" alt="Airlangga Nanotechnology Week" class="max-h-[380px] w-auto object-contain rounded-2xl shadow-sm">
+                        <span class="text-sm font-bold text-gray-800 mt-4">Airlangga Nanotechnology Week</span>
                     </div>
-                    <div class="min-w-full snap-center flex justify-center items-center">
-                        <img src="assets/sertifikat falp.jpg" alt="FALP Certificate" class="max-h-[380px] w-auto object-contain rounded-lg shadow-sm">
+                    <div class="coverflow-item bg-white p-4 rounded-3xl border border-pink-100 shadow-xl flex flex-col items-center">
+                        <img src="assets/sertifikat falp.jpg" alt="FALP Certificate" class="max-h-[380px] w-auto object-contain rounded-2xl shadow-sm">
+                        <span class="text-sm font-bold text-gray-800 mt-4">FALP Certificate</span>
                     </div>
-                    <div class="min-w-full snap-center flex justify-center items-center">
-                        <img src="assets/sertifikat project based internship.jpg" alt="PBI Certificate" class="max-h-[380px] w-auto object-contain rounded-lg shadow-sm">
+                    <div class="coverflow-item bg-white p-4 rounded-3xl border border-pink-100 shadow-xl flex flex-col items-center">
+                        <img src="assets/sertifikat project based internship.jpg" alt="PBI Certificate" class="max-h-[380px] w-auto object-contain rounded-2xl shadow-sm">
+                        <span class="text-sm font-bold text-gray-800 mt-4">Project-Based Internship Certificate</span>
                     </div>
                 </div>
+
+                <!-- Dots Indikator -->
                 <div class="flex justify-center gap-2 pt-6" id="achievement-dots">
                     <span class="w-2.5 h-2.5 rounded-full bg-pink-500 transition-all duration-300"></span>
                     <span class="w-2.5 h-2.5 rounded-full bg-gray-200 transition-all duration-300"></span>
@@ -660,6 +782,7 @@
             </div>
         </div>
     </section>
+
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-white/50 px-6">
         <div class="max-w-3xl mx-auto bg-gradient-to-br from-pink-50 via-white to-yellow-50 p-8 sm:p-12 rounded-3xl border border-pink-200 shadow-xl animated-card text-center space-y-6 relative overflow-hidden">
@@ -678,10 +801,15 @@
             </div>
         </div>
     </section>
-    <!-- Footer -->
-    <footer class="py-8 text-center text-xs text-gray-500 border-t border-pink-100 bg-white/30">
-        <p>© 2026 Wulan Septiani • Crafted with passion & code.</p>
-    </footer>
+
+    <!-- Marquee Running Text Section -->
+    <div class="marquee-container">
+        <div class="marquee-track">
+            <span>✨ SOFTWARE ENGINEERING UNDERGRADUATE • WULAN SEPTIANI • ITS SURABAYA ✨ CODE & CREATIVE DESIGN ✨</span>
+            <span>✨ SOFTWARE ENGINEERING UNDERGRADUATE • WULAN SEPTIANI • ITS SURABAYA ✨ CODE & CREATIVE DESIGN ✨</span>
+        </div>
+    </div>
+
     <!-- JavaScript -->
     <script>
         // Mobile Menu Toggle
@@ -749,25 +877,30 @@
                 updateInternDots();
             }
         });
-        // Achievements Carousel Logic
+
+        // --- COVERFLOW 3D GALLERY LOGIC FOR ACHIEVEMENTS ---
         let achieveIndex = 0;
+        const achieveItems = document.querySelectorAll('.coverflow-item');
         const achieveTrack = document.getElementById('achievement-track');
         const achieveDots = document.getElementById('achievement-dots').children;
-        function slideAchievements(direction) {
-            const totalItems = achieveTrack.children.length;
-            if (direction === 'next') {
-                achieveIndex = (achieveIndex + 1) % totalItems;
-            } else {
-                achieveIndex = (achieveIndex - 1 + totalItems) % totalItems;
-            }
-            const targetCard = achieveTrack.children[achieveIndex];
-            achieveTrack.scrollTo({
-                left: targetCard.offsetLeft - achieveTrack.offsetLeft,
-                behavior: 'smooth'
+
+        function updateCoverflow() {
+            achieveItems.forEach((item, idx) => {
+                item.classList.remove('active');
+                if (idx === achieveIndex) {
+                    item.classList.add('active');
+                }
             });
-            updateAchieveDots();
-        }
-        function updateAchieveDots() {
+            // Hitung perpindahan geser track agar item aktif tepat berada di tengah
+            const activeItem = achieveItems[achieveIndex];
+            const trackWidth = achieveTrack.offsetWidth;
+            const itemLeft = activeItem.offsetLeft;
+            const itemWidth = activeItem.offsetWidth;
+            const centerOffset = (trackWidth / 2) - (itemLeft + (itemWidth / 2));
+            
+            achieveTrack.style.transform = `translateX(${centerOffset}px)`;
+
+            // Update dots
             Array.from(achieveDots).forEach((dot, idx) => {
                 if (idx === achieveIndex) {
                     dot.classList.remove('bg-gray-200');
@@ -778,15 +911,21 @@
                 }
             });
         }
-        achieveTrack.addEventListener('scroll', () => {
-            const scrollPos = achieveTrack.scrollLeft;
-            const cardWidth = achieveTrack.children[0].offsetWidth + 32;
-            const index = Math.round(scrollPos / cardWidth);
-            if (index >= 0 && index < achieveDots.length) {
-                achieveIndex = index;
-                updateAchieveDots();
+
+        function slideAchievements(direction) {
+            const totalItems = achieveItems.length;
+            if (direction === 'next') {
+                achieveIndex = (achieveIndex + 1) % totalItems;
+            } else {
+                achieveIndex = (achieveIndex - 1 + totalItems) % totalItems;
             }
-        });
+            updateCoverflow();
+        }
+
+        // Jalankan saat pertama kali dimuat & saat ukuran jendela berubah
+        window.addEventListener('load', updateCoverflow);
+        window.addEventListener('resize', updateCoverflow);
+
         // Project Filter Function
         function filterProjects(category) {
             const cards = document.querySelectorAll('.project-card');
@@ -805,9 +944,8 @@
                 }
             });
         }
-        // --- DYNAMIC BACKGROUND FLOATING ANIMATION GENERATORS ---
         
-        // 1. Hero Section (Bintang)
+        // --- DYNAMIC BACKGROUND FLOATING ANIMATION GENERATORS ---
         const heroContainer = document.getElementById('stars-container');
         const starColors = ['text-pink-300', 'text-yellow-400', 'text-pink-400', 'text-yellow-300', 'text-purple-300'];
         const starIcons = ['fa-star', 'fa-sparkles'];
